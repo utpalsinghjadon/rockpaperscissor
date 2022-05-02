@@ -1,0 +1,61 @@
+/* Darker Grey -> #212529 */
+/* Dark Grey -> #343a40 */
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
+* {
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #343a40;
+    font-family: 'Permanent Marker';
+    color: #69db7c;
+}
+
+.name {
+    background-color: #212529;
+    text-align: center;
+    padding: 1rem;
+    font-size: 2rem;
+    letter-spacing: 0.38rem;
+    margin-bottom: 4rem;
+
+}
+
+.container {
+    text-align: center;
+}
+
+.score-box {
+    display: inline-flex;
+    font-size: 2rem;
+    background-color: #212529;
+    gap: 2rem;
+    margin: 0 auto;
+    border: 2px solid;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+
+.choices {
+    /* border: solid 1px; */
+    padding: 5rem;
+}
+
+.choice {
+    background-color: #212529;
+    padding: 3rem;
+    margin-right: 0.5rem;
+    border: 0px solid;
+    border-radius: 50%;
+    font-size: 2rem;
+}
+
+.choice:hover {
+    box-shadow: 0 0 15px -3px #fff;
+    background-color: black;
+}
