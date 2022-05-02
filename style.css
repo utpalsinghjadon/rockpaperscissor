@@ -1,5 +1,7 @@
 /* Darker Grey -> #212529 */
 /* Dark Grey -> #343a40 */
+
+
 @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
 
 * {
@@ -58,4 +60,25 @@ body {
 .choice:hover {
     box-shadow: 0 0 15px -3px #fff;
     background-color: black;
+}
+
+.newgame-button {
+    border: none;
+    background-color: #343a40;
+    font-family: 'Permanent Marker';
+    color: #69db7c;
+    border-radius: 0.5rem;
+}
+
+.newgame-button:hover {
+    background-color: #212529;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+
 }
