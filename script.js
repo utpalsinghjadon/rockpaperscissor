@@ -15,9 +15,15 @@ const drawMsg = function (choice) {
     computerScore.textContent = scores[1]
     userScore.textContent = scores[0]
 }
-
-const winMsgUser = () => {
-    winnerMessage.textContent = "Draw"
+const winMsgUser = (uChoice, computerChoice) => {
+    winnerMessage.textContent = `You win -> You Choose ${choices[uChoice - 1][1]} and Computer Choose ${choices[computerChoice - 1][1]}`
+    computerScore.textContent = scores[1]
+    userScore.textContent = scores[0]
+}
+const winMsgComp = (uChoice, computerChoice) => {
+    winnerMessage.textContent = `Computer wins -> You Choose ${choices[uChoice - 1][1]} and Computer Choose ${choices[computerChoice - 1][1]}`
+    computerScore.textContent = scores[1]
+    userScore.textContent = scores[0]
 }
 
 let scores = [0, 0]
@@ -30,6 +36,19 @@ const winner = function (uChoice) {
         scores[0]++
         scores[1]++
         drawMsg(uChoice)
+    }
+    else {
+        if (uChoice === 1 && computerChoice === 2 || uChoice === 2 && computerChoice === 3 || uChoice === 3 && computerChoice === 1) {
+            scores[1]++
+            scores[1]++
+            winMsgComp(uChoice, computerChoice)
+
+        } else {
+            scores[0]++
+            scores[0]++
+            winMsgUser(uChoice, computerChoice)
+
+        }
     }
 
 }
@@ -47,5 +66,17 @@ choiceScissors.addEventListener('click', function () {
     let userChoice = 3;
     winner(userChoice);
 });
+
+
+
+// New Game Button
+
+newGameButton.addEventListener('click', function () {
+    console.log("hi")
+    scores = [0, 0]
+    computerScore.textContent = scores[1]
+    userScore.textContent = scores[0]
+
+})
 
 
