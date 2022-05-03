@@ -26,7 +26,6 @@ let scores = [0, 0]
 const winner = function (uChoice) {
     const computerChoice = Math.ceil(Math.random() * 3)
     console.log(computerChoice)
-
     if (uChoice === computerChoice) {
         scores[0]++
         scores[1]++
@@ -39,14 +38,14 @@ choiceRock.addEventListener('click', function () {
     let userChoice = 1;
     winner(userChoice);
 
-})
+});
 choicePaper.addEventListener('click', function () {
     let userChoice = 2;
     winner(userChoice);
-})
+});
 choiceScissors.addEventListener('click', function () {
     let userChoice = 3;
     winner(userChoice);
-})
+});
 
 
