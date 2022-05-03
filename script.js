@@ -26,6 +26,7 @@ let scores = [0, 0]
 const winner = function (uChoice) {
     const computerChoice = Math.ceil(Math.random() * 3)
     console.log(computerChoice)
+
     if (uChoice === computerChoice) {
         scores[0]++
         scores[1]++
