@@ -31,7 +31,6 @@ let scores = [0, 0]
 
 const winner = function (uChoice) {
     const computerChoice = Math.ceil(Math.random() * 3)
-    console.log(computerChoice)
     if (uChoice === computerChoice) {
         scores[0]++
         scores[1]++
@@ -72,7 +71,6 @@ choiceScissors.addEventListener('click', function () {
 // New Game Button
 
 newGameButton.addEventListener('click', function () {
-    console.log("hi")
     scores = [0, 0]
     computerScore.textContent = scores[1]
     userScore.textContent = scores[0]
