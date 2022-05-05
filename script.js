@@ -30,25 +30,29 @@ let scores = [0, 0]
 
 
 const winner = function (uChoice) {
-    const computerChoice = Math.ceil(Math.random() * 3)
-    if (uChoice === computerChoice) {
-        scores[0]++
-        scores[1]++
-        drawMsg(uChoice)
-    }
-    else {
-        if (uChoice === 1 && computerChoice === 2 || uChoice === 2 && computerChoice === 3 || uChoice === 3 && computerChoice === 1) {
-            scores[1]++
-            scores[1]++
-            winMsgComp(uChoice, computerChoice)
-
-        } else {
+    winnerMessage.textContent = `Computer Is Thinking😶😝`
+    setTimeout(() => {
+        const computerChoice = Math.ceil(Math.random() * 3)
+        if (uChoice === computerChoice) {
             scores[0]++
-            scores[0]++
-            winMsgUser(uChoice, computerChoice)
-
+            scores[1]++
+            drawMsg(uChoice)
         }
-    }
+        else {
+            if (uChoice === 1 && computerChoice === 2 || uChoice === 2 && computerChoice === 3 || uChoice === 3 && computerChoice === 1) {
+                scores[1]++
+                scores[1]++
+                winMsgComp(uChoice, computerChoice)
+
+            } else {
+                scores[0]++
+                scores[0]++
+                winMsgUser(uChoice, computerChoice)
+
+            }
+        }
+    }, 2000);
+
 
 }
 
